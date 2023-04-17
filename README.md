@@ -22,6 +22,7 @@ featureCounts -T 16 -F GTF -a GRCh38_GENCODE_rmsk_TE.gtf -t exon -g gene_id --ex
 ````
 awk -F'\t' 'BEGIN{OFS=FS}{$2=$3=$4=$5=$6=$7=""; gsub("[\t]+","\t")}1' te_counts.txt > output_reduced.txt
 ````
+### Next we will import the counts file into R and perform DEG analysis using edgeR
 
 ### here we use ggplot2 to visualize the edgeR output into volcano plot
 
